@@ -1,0 +1,10 @@
+numpy
+pandas
+scikit-learn
+matplotlib
+torch
+yfinance
+fastapi
+uvicorn[standard]
+python-dotenv
+joblib
