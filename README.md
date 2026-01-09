@@ -103,20 +103,3 @@ Para gerar a imagem (inclui `models/` do workspace):
 docker build -t stock-lstm:local .
 docker run -d --name stock-lstm-local -p 8000:8000 stock-lstm:local
 ```
-
-Observações importantes
-
-- O endpoint `POST /predict` espera pelo menos `window` (padrão 20) valores em `history`.
-- O scaffold salva modelos e scaler em `models/` — quando treinar em outro símbolo, copie/nomine adequadamente.
-- Arquitetura e hiperparâmetros são básicos; recomenda-se tuning para produção.
-
-Próximos passos / melhorias sugeridas
-
-- Salvar metadados de treino (window, hidden_size, num_layers) junto ao modelo.
-- Endpoints para listar modelos disponíveis e exibir metadados.
-- Monitoramento básico (logging, métricas Prometheus) para produção.
-- Notebook Jupyter com análise exploratória e gráficos de previsão vs real.
-
-Contato
-
-Se quiser, eu posso: (1) adicionar endpoint de listagem de modelos, (2) salvar metadados no treino, ou (3) criar notebooks e relatórios de avaliação.
